@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabSimulacion = new System.Windows.Forms.TabPage();
+            this.btn_excel = new System.Windows.Forms.Button();
+            this.btn_teams = new System.Windows.Forms.Button();
+            this.btn_discord = new System.Windows.Forms.Button();
             this.Log = new System.Windows.Forms.ListBox();
             this.lblDisco = new System.Windows.Forms.Label();
             this.lblMemoria = new System.Windows.Forms.Label();
@@ -71,6 +74,10 @@
             // 
             // tabSimulacion
             // 
+            this.tabSimulacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
+            this.tabSimulacion.Controls.Add(this.btn_excel);
+            this.tabSimulacion.Controls.Add(this.btn_teams);
+            this.tabSimulacion.Controls.Add(this.btn_discord);
             this.tabSimulacion.Controls.Add(this.Log);
             this.tabSimulacion.Controls.Add(this.lblDisco);
             this.tabSimulacion.Controls.Add(this.lblMemoria);
@@ -84,7 +91,41 @@
             this.tabSimulacion.Size = new System.Drawing.Size(768, 400);
             this.tabSimulacion.TabIndex = 0;
             this.tabSimulacion.Text = "Simulación ";
-            this.tabSimulacion.UseVisualStyleBackColor = true;
+            // 
+            // btn_excel
+            // 
+            this.btn_excel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_excel.Image = global::Simulador_de_procesos.Properties.Resources.excel;
+            this.btn_excel.Location = new System.Drawing.Point(226, 289);
+            this.btn_excel.Name = "btn_excel";
+            this.btn_excel.Size = new System.Drawing.Size(83, 57);
+            this.btn_excel.TabIndex = 12;
+            this.btn_excel.UseVisualStyleBackColor = false;
+            this.btn_excel.Click += new System.EventHandler(this.btn_excel_Click);
+            // 
+            // btn_teams
+            // 
+            this.btn_teams.Image = global::Simulador_de_procesos.Properties.Resources.Microsoft_Teams_6228c4fb14083__1_;
+            this.btn_teams.Location = new System.Drawing.Point(137, 289);
+            this.btn_teams.Name = "btn_teams";
+            this.btn_teams.Size = new System.Drawing.Size(83, 57);
+            this.btn_teams.TabIndex = 11;
+            this.btn_teams.UseVisualStyleBackColor = true;
+            this.btn_teams.Click += new System.EventHandler(this.btn_teams_Click);
+            // 
+            // btn_discord
+            // 
+            this.btn_discord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(101)))), ((int)(((byte)(246)))));
+            this.btn_discord.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_discord.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_discord.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_discord.Image = global::Simulador_de_procesos.Properties.Resources.Discord_New_Logo;
+            this.btn_discord.Location = new System.Drawing.Point(48, 289);
+            this.btn_discord.Name = "btn_discord";
+            this.btn_discord.Size = new System.Drawing.Size(83, 57);
+            this.btn_discord.TabIndex = 10;
+            this.btn_discord.UseVisualStyleBackColor = false;
+            this.btn_discord.Click += new System.EventHandler(this.btn_discord_Click);
             // 
             // Log
             // 
@@ -277,6 +318,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -317,6 +359,9 @@
         private System.Windows.Forms.Button btnCrearProceso;
         private System.Windows.Forms.ListBox Resumen;
         private System.Windows.Forms.Button btnReporte;
+        private System.Windows.Forms.Button btn_excel;
+        private System.Windows.Forms.Button btn_teams;
+        private System.Windows.Forms.Button btn_discord;
     }
 }
 

@@ -69,6 +69,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -82,6 +83,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Discord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Discord1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Discord-New-Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Microsoft-Teams-6228c4fb14083.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Microsoft-Teams-6228c4fb14083 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1bdb8ac897512116cbac58ffe7560d82.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

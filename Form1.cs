@@ -146,10 +146,17 @@ namespace Simulador_de_procesos
         // Crear nuevos procesos
         private void btnCrearProceso_Click_1(object sender, EventArgs e)
         {
+
+
+
             // Captura los datos
             string nombre = txtNombreProceso.Text;
             int duracion = (int)nudDuracion.Value;
             int memoriaMB = (int)nudTamanio.Value;
+
+          
+
+  
 
             // Validación de entradas
             if (string.IsNullOrWhiteSpace(nombre))
@@ -201,6 +208,85 @@ namespace Simulador_de_procesos
             ActualizarMemoria();
             //Actualizar barra disco
             ActualizarDisco();
+        }
+
+  
+
+        private void btn_discord_Click(object sender, EventArgs e)          
+        {
+            string nombre = "Discord";
+            int duracion = 506, memoriaMB = 250;
+            // Crea el proceso
+            Proceso nuevo = new Proceso(nombre, duracion, memoriaMB);
+
+            // Intentar cargar en memoria
+            if (memoria.Agregar(nuevo))
+            {
+                // Si pasa lo agrega
+                cpu.Agregar(nuevo);
+                // Lo muestra en el log
+                Log.Items.Insert(0, $"[RAM] Proceso {nombre} agregado.");
+            }
+            // Si no cabe RAM lo envia a swap
+            else if (disco.Agregar(nuevo))
+            {
+                // Mensaje
+                Log.Items.Insert(0, $"[SWAP] Proceso {nombre} enviado al disco.");
+            }
+            // Si no pasa las validaciones anteriores
+            else
+            {
+                MessageBox.Show("No hay suficiente memoria ni espacio en disco para este proceso.");
+                Log.Items.Insert(0, $"[ERROR] Proceso {nombre} descartado por falta de espacio.");
+            }
+        }
+
+        private void btn_teams_Click(object sender, EventArgs e)
+        {
+            string nombre = "Teams";
+            int duracion = 4354, memoriaMB = 250;
+            Proceso nuevo = new Proceso(nombre, duracion, memoriaMB);
+
+            if (memoria.Agregar(nuevo))
+            {
+                cpu.Agregar(nuevo);
+                Log.Items.Insert(0, $"[RAM] Proceso {nombre} agregado");
+            }
+            else if (disco.Agregar(nuevo))
+            {
+                Log.Items.Insert(0, $"[SWAP] Proceso {nombre} enviado al disco");
+
+            }
+            else
+            {
+                MessageBox.Show("No hay suficiente memoria ni espacio en disco para este proceso.");
+                Log.Items.Insert(0, $"[ERROR] Proceso {nombre} descartado por falta de espacio.");
+            }
+
+        }
+
+        private void btn_excel_Click(object sender, EventArgs e)
+        {
+            string nombre = "Excel";
+            int duracion = 5465, memoriaMB = 798;
+            Proceso nuevo = new Proceso(nombre, duracion, memoriaMB);
+
+
+            if (memoria.Agregar(nuevo))
+            {
+                cpu.Agregar(nuevo);
+                Log.Items.Insert(0, $"[RAM] Procesp {nombre} agregado");
+
+            }
+            else if(disco.Agregar(nuevo)){
+                Log.Items.Insert(0, $"[SWAP] Proceso {nombre} enviado al disco");
+
+            }
+            else
+            {
+                MessageBox.Show("No hay suficiente memoria ni espacio en disco para este proceso.");
+                Log.Items.Insert(0, $"[ERROR] Proceso {nombre} descartado por falta de espacio ");
+            }
         }
     }
 }
