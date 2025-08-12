@@ -127,6 +127,31 @@ namespace Simulador_de_procesos
                 }
             }
         }
+
+        private void crearProceso(Proceso nuevo, string nombre)
+        {
+            // Intentar cargar en memoria
+            if (memoria.Agregar(nuevo))
+            {
+                // Si pasa lo agrega
+                cpu.Agregar(nuevo);
+                // Lo muestra en el log
+                Log.Items.Insert(0, $"[RAM] Proceso {nombre} agregado.");
+            }
+            // Si no cabe RAM lo envia a swap
+            else if (disco.Agregar(nuevo))
+            {
+                // Mensaje
+                Log.Items.Insert(0, $"[SWAP] Proceso {nombre} enviado al disco.");
+            }
+            // Si no pasa las validaciones anteriores
+            else
+            {
+                MessageBox.Show("No hay suficiente memoria ni espacio en disco para este proceso.");
+                Log.Items.Insert(0, $"[ERROR] Proceso {nombre} descartado por falta de espacio.");
+            }
+
+        }
         // Resumen del estado actual
         private void btnReporte_Click(object sender, EventArgs e)
         {
@@ -222,74 +247,145 @@ namespace Simulador_de_procesos
             // Crea el proceso
             Proceso nuevo = new Proceso(nombre, duracion, memoriaMB);
 
-            // Intentar cargar en memoria
-            if (memoria.Agregar(nuevo))
-            {
-                // Si pasa lo agrega
-                cpu.Agregar(nuevo);
-                // Lo muestra en el log
-                Log.Items.Insert(0, $"[RAM] Proceso {nombre} agregado.");
-            }
-            // Si no cabe RAM lo envia a swap
-            else if (disco.Agregar(nuevo))
-            {
-                // Mensaje
-                Log.Items.Insert(0, $"[SWAP] Proceso {nombre} enviado al disco.");
-            }
-            // Si no pasa las validaciones anteriores
-            else
-            {
-                MessageBox.Show("No hay suficiente memoria ni espacio en disco para este proceso.");
-                Log.Items.Insert(0, $"[ERROR] Proceso {nombre} descartado por falta de espacio.");
-            }
+            
         }
 
-        private void btn_teams_Click(object sender, EventArgs e)
+
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
             string nombre = "Teams";
-            int duracion = 4354, memoriaMB = 250;
+            int duracion , memoriaMB;
+
+            Random rdn = new Random();
+
+            duracion = rdn.Next(1000, 10000);
+            memoriaMB = rdn.Next(250, 650);
             Proceso nuevo = new Proceso(nombre, duracion, memoriaMB);
 
-            if (memoria.Agregar(nuevo))
-            {
-                cpu.Agregar(nuevo);
-                Log.Items.Insert(0, $"[RAM] Proceso {nombre} agregado");
-            }
-            else if (disco.Agregar(nuevo))
-            {
-                Log.Items.Insert(0, $"[SWAP] Proceso {nombre} enviado al disco");
-
-            }
-            else
-            {
-                MessageBox.Show("No hay suficiente memoria ni espacio en disco para este proceso.");
-                Log.Items.Insert(0, $"[ERROR] Proceso {nombre} descartado por falta de espacio.");
-            }
-
+            crearProceso(nuevo,nombre);
         }
 
-        private void btn_excel_Click(object sender, EventArgs e)
+        private void discord_Click(object sender, EventArgs e)
+        {
+            string nombre = "Discord";
+            int duracion , memoriaMB;
+
+            Random rdn = new Random();
+
+            duracion = rdn.Next(1000, 10000);
+            memoriaMB = rdn.Next(250, 650);
+            // Crea el proceso
+            Proceso nuevo = new Proceso(nombre, duracion, memoriaMB);
+
+            crearProceso(nuevo, nombre);
+        }
+
+        private void excel_Click(object sender, EventArgs e)
         {
             string nombre = "Excel";
-            int duracion = 5465, memoriaMB = 798;
+            int duracion , memoriaMB;
+
+            Random rdn = new Random();
+
+            duracion = rdn.Next(1000, 10000);
+            memoriaMB = rdn.Next(250, 650);
+            Proceso nuevo = new Proceso(nombre, duracion, memoriaMB);
+
+            crearProceso(nuevo, nombre);
+        }
+
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pinterest_Click(object sender, EventArgs e)
+        {                             
+            string nombre = "Pinterest";
+            int duracion , memoriaMB ;
+
+            Random rdn = new Random();
+
+            duracion = rdn.Next(1000, 10000);
+            memoriaMB = rdn.Next(250,650);
             Proceso nuevo = new Proceso(nombre, duracion, memoriaMB);
 
 
-            if (memoria.Agregar(nuevo))
-            {
-                cpu.Agregar(nuevo);
-                Log.Items.Insert(0, $"[RAM] Procesp {nombre} agregado");
+            crearProceso(nuevo, nombre);
+        }
 
-            }
-            else if(disco.Agregar(nuevo)){
-                Log.Items.Insert(0, $"[SWAP] Proceso {nombre} enviado al disco");
+        private void Visual_Studio_Click(object sender, EventArgs e)
+        {
+            string nombre = "Visual Studio 2022";
+            int duracion, memoriaMB;
 
-            }
-            else
-            {
-                MessageBox.Show("No hay suficiente memoria ni espacio en disco para este proceso.");
-                Log.Items.Insert(0, $"[ERROR] Proceso {nombre} descartado por falta de espacio ");
-            }
+            Random rdn = new Random();
+
+            duracion = rdn.Next(1000, 10000);
+            memoriaMB = rdn.Next(250, 650);
+            Proceso nuevo = new Proceso(nombre, duracion, memoriaMB);
+
+            crearProceso(nuevo, nombre);
+        }
+
+        private void Visual_code_Click(object sender, EventArgs e)
+        {
+            string nombre = "Visual Code";
+            int duracion, memoriaMB;
+
+            Random rdn = new Random();
+
+            duracion = rdn.Next(1000, 10000);
+            memoriaMB = rdn.Next(250, 650);
+            Proceso nuevo = new Proceso(nombre, duracion, memoriaMB);
+
+
+            crearProceso(nuevo, nombre);
+        }
+
+        private void sql_server_Click(object sender, EventArgs e)
+        {
+            string nombre = "SQL Server Management Studio";
+            int duracion, memoriaMB;
+
+            Random rdn = new Random();
+
+            duracion = rdn.Next(1000, 10000);
+            memoriaMB = rdn.Next(250, 650);
+            Proceso nuevo = new Proceso(nombre, duracion, memoriaMB);
+
+            crearProceso(nuevo, nombre);
+        }
+
+        private void github_Click(object sender, EventArgs e)
+        {
+            string nombre = "Git Hub";
+            int duracion, memoriaMB;
+
+            Random rdn = new Random();
+
+            duracion = rdn.Next(1000, 10000);
+            memoriaMB = rdn.Next(250, 650);
+            Proceso nuevo = new Proceso(nombre, duracion, memoriaMB);
+
+
+            crearProceso(nuevo, nombre);
+        }
+
+        private void word_Click(object sender, EventArgs e)
+        {
+            string nombre = "Word";
+            int duracion, memoriaMB;
+
+            Random rdn = new Random();
+
+            duracion = rdn.Next(1000, 10000);
+            memoriaMB = rdn.Next(250, 650);
+            Proceso nuevo = new Proceso(nombre, duracion, memoriaMB);
+
+
+            crearProceso(nuevo, nombre);
         }
     }
 }
