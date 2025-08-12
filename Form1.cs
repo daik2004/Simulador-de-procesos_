@@ -30,6 +30,9 @@ namespace Simulador_de_procesos
             disco = new SimuladorDisco();
             // Inicia el timer del form
             timerSimulacion.Start();
+
+            progressMemoria.Style = ProgressBarStyle.Continuous;
+            progressMemoria.BackColor = Color.FromArgb(0xF5, 0xF0, 0xF6);
         }
 
         // Actualiza la barra de disco 
