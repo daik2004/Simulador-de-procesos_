@@ -283,9 +283,9 @@
             this.Log.ForeColor = System.Drawing.SystemColors.Menu;
             this.Log.FormattingEnabled = true;
             this.Log.ItemHeight = 16;
-            this.Log.Location = new System.Drawing.Point(461, 1);
+            this.Log.Location = new System.Drawing.Point(393, 6);
             this.Log.Name = "Log";
-            this.Log.Size = new System.Drawing.Size(355, 352);
+            this.Log.Size = new System.Drawing.Size(421, 352);
             this.Log.TabIndex = 6;
             // 
             // lblDisco
