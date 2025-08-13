@@ -33,6 +33,7 @@
             this.tabLog = new System.Windows.Forms.TabPage();
             this.Resumen = new System.Windows.Forms.ListBox();
             this.btnReporte = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.tabCrearProceso = new System.Windows.Forms.TabPage();
             this.btnCrearProceso = new System.Windows.Forms.Button();
             this.nudDuracion = new System.Windows.Forms.NumericUpDown();
@@ -41,17 +42,12 @@
             this.lblTamanio = new System.Windows.Forms.Label();
             this.lblNomProceso = new System.Windows.Forms.Label();
             this.txtNombreProceso = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.tabSimulacion = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Log = new System.Windows.Forms.ListBox();
-            this.lblDisco = new System.Windows.Forms.Label();
-            this.lblMemoria = new System.Windows.Forms.Label();
-            this.lblCPU = new System.Windows.Forms.Label();
-            this.progressDisco = new System.Windows.Forms.ProgressBar();
-            this.progressMemoria = new System.Windows.Forms.ProgressBar();
-            this.progressCPU = new System.Windows.Forms.ProgressBar();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.btn_cerrar = new System.Windows.Forms.Button();
             this.github = new System.Windows.Forms.PictureBox();
             this.sql_server = new System.Windows.Forms.PictureBox();
             this.Visual_code = new System.Windows.Forms.PictureBox();
@@ -61,18 +57,26 @@
             this.excel = new System.Windows.Forms.PictureBox();
             this.discord = new System.Windows.Forms.PictureBox();
             this.teams = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.Log = new System.Windows.Forms.ListBox();
+            this.lblDisco = new System.Windows.Forms.Label();
+            this.lblMemoria = new System.Windows.Forms.Label();
+            this.lblCPU = new System.Windows.Forms.Label();
+            this.progressDisco = new System.Windows.Forms.ProgressBar();
+            this.progressMemoria = new System.Windows.Forms.ProgressBar();
+            this.progressCPU = new System.Windows.Forms.ProgressBar();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.btn_cerrar = new System.Windows.Forms.Button();
             this.tabLog.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tabCrearProceso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDuracion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTamanio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabSimulacion.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.github)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sql_server)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Visual_code)).BeginInit();
@@ -82,11 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.excel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.discord)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teams)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // timerSimulacion
@@ -131,6 +131,15 @@
             this.btnReporte.Text = "Reporte";
             this.btnReporte.UseVisualStyleBackColor = false;
             this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Simulador_de_procesos.Properties.Resources.Capturee1;
+            this.pictureBox5.Location = new System.Drawing.Point(248, 276);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(278, 81);
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
             // 
             // tabCrearProceso
             // 
@@ -237,6 +246,45 @@
             this.txtNombreProceso.Size = new System.Drawing.Size(155, 17);
             this.txtNombreProceso.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Simulador_de_procesos.Properties.Resources.Capture1;
+            this.pictureBox1.Location = new System.Drawing.Point(148, 55);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(198, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Simulador_de_procesos.Properties.Resources.Capture1;
+            this.pictureBox2.Location = new System.Drawing.Point(160, 101);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(176, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Simulador_de_procesos.Properties.Resources.Capture1;
+            this.pictureBox3.Location = new System.Drawing.Point(160, 161);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(176, 40);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Simulador_de_procesos.Properties.Resources.Capturee;
+            this.pictureBox4.Location = new System.Drawing.Point(336, 304);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(156, 81);
+            this.pictureBox4.TabIndex = 10;
+            this.pictureBox4.TabStop = false;
+            // 
             // tabSimulacion
             // 
             this.tabSimulacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
@@ -274,91 +322,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(854, 54);
             this.panel1.TabIndex = 17;
-            // 
-            // Log
-            // 
-            this.Log.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
-            this.Log.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Log.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Log.ForeColor = System.Drawing.SystemColors.Menu;
-            this.Log.FormattingEnabled = true;
-            this.Log.ItemHeight = 16;
-            this.Log.Location = new System.Drawing.Point(393, 6);
-            this.Log.Name = "Log";
-            this.Log.Size = new System.Drawing.Size(421, 352);
-            this.Log.TabIndex = 6;
-            // 
-            // lblDisco
-            // 
-            this.lblDisco.AutoSize = true;
-            this.lblDisco.Location = new System.Drawing.Point(47, 147);
-            this.lblDisco.Name = "lblDisco";
-            this.lblDisco.Size = new System.Drawing.Size(47, 18);
-            this.lblDisco.TabIndex = 5;
-            this.lblDisco.Text = "Disco";
-            // 
-            // lblMemoria
-            // 
-            this.lblMemoria.AutoSize = true;
-            this.lblMemoria.Location = new System.Drawing.Point(44, 89);
-            this.lblMemoria.Name = "lblMemoria";
-            this.lblMemoria.Size = new System.Drawing.Size(67, 18);
-            this.lblMemoria.TabIndex = 4;
-            this.lblMemoria.Text = "Memoria";
-            // 
-            // lblCPU
-            // 
-            this.lblCPU.AutoSize = true;
-            this.lblCPU.Location = new System.Drawing.Point(47, 30);
-            this.lblCPU.Name = "lblCPU";
-            this.lblCPU.Size = new System.Drawing.Size(40, 18);
-            this.lblCPU.TabIndex = 3;
-            this.lblCPU.Text = "CPU";
-            // 
-            // progressDisco
-            // 
-            this.progressDisco.Location = new System.Drawing.Point(47, 168);
-            this.progressDisco.Name = "progressDisco";
-            this.progressDisco.Size = new System.Drawing.Size(140, 30);
-            this.progressDisco.TabIndex = 2;
-            // 
-            // progressMemoria
-            // 
-            this.progressMemoria.Location = new System.Drawing.Point(47, 110);
-            this.progressMemoria.Name = "progressMemoria";
-            this.progressMemoria.Size = new System.Drawing.Size(140, 30);
-            this.progressMemoria.TabIndex = 1;
-            // 
-            // progressCPU
-            // 
-            this.progressCPU.Location = new System.Drawing.Point(47, 51);
-            this.progressCPU.Name = "progressCPU";
-            this.progressCPU.Size = new System.Drawing.Size(140, 30);
-            this.progressCPU.TabIndex = 0;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabSimulacion);
-            this.tabControl1.Controls.Add(this.tabCrearProceso);
-            this.tabControl1.Controls.Add(this.tabLog);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(-4, 26);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(846, 437);
-            this.tabControl1.TabIndex = 0;
-            // 
-            // btn_cerrar
-            // 
-            this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
-            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cerrar.Image = global::Simulador_de_procesos.Properties.Resources.exit_5440572;
-            this.btn_cerrar.Location = new System.Drawing.Point(780, 3);
-            this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(38, 38);
-            this.btn_cerrar.TabIndex = 18;
-            this.btn_cerrar.UseVisualStyleBackColor = true;
-            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
             // github
             // 
@@ -460,61 +423,98 @@
             // 
             this.teams.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.teams.Image = global::Simulador_de_procesos.Properties.Resources.images;
-            this.teams.Location = new System.Drawing.Point(3, -3);
+            this.teams.Location = new System.Drawing.Point(3, 3);
             this.teams.Name = "teams";
-            this.teams.Size = new System.Drawing.Size(44, 43);
+            this.teams.Size = new System.Drawing.Size(40, 37);
             this.teams.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.teams.TabIndex = 15;
             this.teams.TabStop = false;
             this.teams.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // pictureBox1
+            // Log
             // 
-            this.pictureBox1.Image = global::Simulador_de_procesos.Properties.Resources.Capture1;
-            this.pictureBox1.Location = new System.Drawing.Point(148, 55);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(198, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.Log.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
+            this.Log.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Log.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Log.ForeColor = System.Drawing.SystemColors.Menu;
+            this.Log.FormattingEnabled = true;
+            this.Log.ItemHeight = 16;
+            this.Log.Location = new System.Drawing.Point(393, 6);
+            this.Log.Name = "Log";
+            this.Log.Size = new System.Drawing.Size(421, 352);
+            this.Log.TabIndex = 6;
             // 
-            // pictureBox2
+            // lblDisco
             // 
-            this.pictureBox2.Image = global::Simulador_de_procesos.Properties.Resources.Capture1;
-            this.pictureBox2.Location = new System.Drawing.Point(160, 101);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(176, 40);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
+            this.lblDisco.AutoSize = true;
+            this.lblDisco.Location = new System.Drawing.Point(47, 147);
+            this.lblDisco.Name = "lblDisco";
+            this.lblDisco.Size = new System.Drawing.Size(47, 18);
+            this.lblDisco.TabIndex = 5;
+            this.lblDisco.Text = "Disco";
             // 
-            // pictureBox3
+            // lblMemoria
             // 
-            this.pictureBox3.Image = global::Simulador_de_procesos.Properties.Resources.Capture1;
-            this.pictureBox3.Location = new System.Drawing.Point(160, 161);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(176, 40);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
+            this.lblMemoria.AutoSize = true;
+            this.lblMemoria.Location = new System.Drawing.Point(44, 89);
+            this.lblMemoria.Name = "lblMemoria";
+            this.lblMemoria.Size = new System.Drawing.Size(67, 18);
+            this.lblMemoria.TabIndex = 4;
+            this.lblMemoria.Text = "Memoria";
             // 
-            // pictureBox4
+            // lblCPU
             // 
-            this.pictureBox4.Image = global::Simulador_de_procesos.Properties.Resources.Capturee;
-            this.pictureBox4.Location = new System.Drawing.Point(336, 304);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(156, 81);
-            this.pictureBox4.TabIndex = 10;
-            this.pictureBox4.TabStop = false;
+            this.lblCPU.AutoSize = true;
+            this.lblCPU.Location = new System.Drawing.Point(47, 30);
+            this.lblCPU.Name = "lblCPU";
+            this.lblCPU.Size = new System.Drawing.Size(40, 18);
+            this.lblCPU.TabIndex = 3;
+            this.lblCPU.Text = "CPU";
             // 
-            // pictureBox5
+            // progressDisco
             // 
-            this.pictureBox5.Image = global::Simulador_de_procesos.Properties.Resources.Capturee1;
-            this.pictureBox5.Location = new System.Drawing.Point(248, 276);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(278, 81);
-            this.pictureBox5.TabIndex = 11;
-            this.pictureBox5.TabStop = false;
+            this.progressDisco.Location = new System.Drawing.Point(47, 168);
+            this.progressDisco.Name = "progressDisco";
+            this.progressDisco.Size = new System.Drawing.Size(226, 30);
+            this.progressDisco.TabIndex = 2;
+            // 
+            // progressMemoria
+            // 
+            this.progressMemoria.Location = new System.Drawing.Point(47, 110);
+            this.progressMemoria.Name = "progressMemoria";
+            this.progressMemoria.Size = new System.Drawing.Size(226, 30);
+            this.progressMemoria.TabIndex = 1;
+            // 
+            // progressCPU
+            // 
+            this.progressCPU.Location = new System.Drawing.Point(47, 51);
+            this.progressCPU.Name = "progressCPU";
+            this.progressCPU.Size = new System.Drawing.Size(226, 30);
+            this.progressCPU.TabIndex = 0;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabSimulacion);
+            this.tabControl1.Controls.Add(this.tabCrearProceso);
+            this.tabControl1.Controls.Add(this.tabLog);
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(-4, 26);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(846, 437);
+            this.tabControl1.TabIndex = 0;
+            // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cerrar.Image = global::Simulador_de_procesos.Properties.Resources.exit_5440572;
+            this.btn_cerrar.Location = new System.Drawing.Point(780, 3);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Size = new System.Drawing.Size(38, 38);
+            this.btn_cerrar.TabIndex = 18;
+            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
             // Form1
             // 
@@ -528,14 +528,18 @@
             this.Name = "Form1";
             this.Text = "Simulador de procesos";
             this.tabLog.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.tabCrearProceso.ResumeLayout(false);
             this.tabCrearProceso.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDuracion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTamanio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tabSimulacion.ResumeLayout(false);
             this.tabSimulacion.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.github)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sql_server)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Visual_code)).EndInit();
@@ -545,11 +549,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.excel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.discord)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teams)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
